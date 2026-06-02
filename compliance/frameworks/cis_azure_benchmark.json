@@ -172,6 +172,11 @@
       "control_id": "6.4",
       "control_name": "Ensure that Azure Firewall is enabled on Virtual Networks",
       "description": "VNet peering connections with allowGatewayTransit or useRemoteGateways enabled allow traffic to route between network segments through shared gateways. This can break network segmentation and enable lateral movement between zones that should remain isolated. Peering connections should be reviewed and gateway transit disabled unless explicitly required and documented."
+    },
+    "AZ-STOR-006": {
+      "control_id": "3.6",
+      "control_name": "Ensure that 'Soft delete' is enabled for active storage accounts",
+      "description": "Enabling soft delete for blobs protects storage account data from being permanently deleted by accident or malicious activity. When disabled, any deleted blob is immediately and permanently erased, leaving no opportunity for recovery."
     }
   }
 }

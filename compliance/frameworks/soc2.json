@@ -167,6 +167,11 @@
       "control_id": "CC6.6",
       "control_name": "Restricts Access from Outside the Network Boundary",
       "description": "VNet peering with allowGatewayTransit or useRemoteGateways enabled allows traffic to cross network boundaries through shared gateways, weakening the logical separation between network zones. CC6.6 requires that logical access from outside the network boundary is restricted and controlled. Gateway transit on peering connections should be disabled to enforce boundary separation."
+    },
+    "AZ-STOR-006": {
+      "control_id": "A1.2",
+      "control_name": "Environmental Threats and Recovery",
+      "description": "Blob soft delete protects storage account data from being permanently deleted by accident or malicious activity. Enabling soft delete ensures that data can be recovered, addressing environmental and operational threats to data availability and supporting recovery procedures."
     }
   }
 }

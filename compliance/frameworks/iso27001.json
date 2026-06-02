@@ -172,6 +172,11 @@
       "control_id": "A.13.1.1",
       "control_name": "Network controls",
       "description": "VNet peering connections with gateway transit enabled allow traffic to flow between network segments through shared gateways, potentially bypassing network controls. Networks should be managed and controlled to protect information in systems and applications. Gateway transit on peering connections should be disabled unless explicitly required."
+    },
+    "AZ-STOR-006": {
+      "control_id": "A.12.3.1",
+      "control_name": "Information backup",
+      "description": "Blob soft delete protects against accidental or malicious loss of blob data. Enabling soft delete ensures that backup copies of information are maintained to protect against loss of data."
     }
   }
 }

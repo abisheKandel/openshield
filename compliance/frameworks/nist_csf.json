@@ -172,6 +172,11 @@
       "control_id": "PR.AC-5",
       "control_name": "Network integrity is protected",
       "description": "VNet peering with gateway transit enabled allows traffic to cross network boundaries through shared gateways, undermining network segmentation. PR.AC-5 requires that network integrity is protected. Disabling gateway transit on peering connections enforces boundary integrity between network zones."
+    },
+    "AZ-STOR-006": {
+      "control_id": "PR.IP-4",
+      "control_name": "Backups of information are conducted, maintained, and tested",
+      "description": "Blob soft delete provides a recoverable state for storage account blob data. Enabling soft delete ensures that backups and redundant copies of information are maintained, protecting against accidental or malicious deletion."
     }
   }
 }

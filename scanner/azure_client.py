@@ -62,6 +62,25 @@ class AzureClient:
             logger.error("get_storage_accounts failed: %s", exc)
             return []
 
+    def get_storage_blob_service_properties(
+        self, resource_group: str, account_name: str
+    ) -> Optional[Any]:
+        """Fetch the blob service properties of a storage account.
+
+        Returns properties containing the delete retention policy (soft delete),
+        or None on error/permission failure.
+        """
+        try:
+            client = StorageManagementClient(self.credential, self.subscription_id)
+            return client.blob_services.get_service_properties(resource_group, account_name)
+        except Exception as exc:
+            logger.error(
+                "get_storage_blob_service_properties(%s) failed: %s",
+                account_name,
+                exc,
+            )
+            return None
+
     def get_storage_lifecycle_policy(
         self, resource_group: str, account_name: str
     ) -> Optional[bool]:
